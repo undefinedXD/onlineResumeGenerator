@@ -19,6 +19,9 @@ public class UserServiceImpl implements UserService, ErrorCode {
     @Transactional
     public int insertUser(User user){
         try{
+            if(user.getName()==""){
+                throw new BusinessException(NAME_NOTNULL_ERROR,"名字不能为空值！");
+            }
             userMapper.insert(user);
             return user.getId();
 

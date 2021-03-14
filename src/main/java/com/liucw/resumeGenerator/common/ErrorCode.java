@@ -6,6 +6,6 @@ public interface ErrorCode {
     int PARAMETER_ERROR = 1;
 
     // 业务异常
-    int STOCK_NOT_ENOUGH = 201;
+    int NAME_NOTNULL_ERROR = 201;
 
 }
